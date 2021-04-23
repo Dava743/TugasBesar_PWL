@@ -17,10 +17,13 @@ class CreateProductsTable extends Migration
             $table->id();
             $table->string('name');
             $table->integer('qty');
-            $table->foreignId('brand_id')->references('id')->on('brands')->onDelete('cascade');
-            $table->foreignId('category_id')->references('id')->on('categories')->onDelete('cascade');
-            $table->string('photo')->nullable();
+            $table->string('price');
+            $table->foreignId('brands_id')->constrained();
+            $table->foreignId('categories_id')->constrained();
+            $table->string('photo');
             $table->timestamps();
+
+
         });
     }
 
