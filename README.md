@@ -34,7 +34,8 @@ php artisan serve
 
 ## Use
 
-```Admin : admin@dava.com
+```
+Admin : admin@dava.com
 password : 123456
 user : user@dava.com
 password : 123456
