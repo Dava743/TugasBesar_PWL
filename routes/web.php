@@ -19,3 +19,5 @@ use Illuminate\Support\Facades\Route;
     Route::resource('barang', ItemController::class);
     Route::resource('merek', MerkController::class);
     Route::resource('kategori', CategoriesController::class);
+    /** Route Profile **/
+    Route::resource('profil', ProfileController::class);
