@@ -23,6 +23,7 @@ Route::group(['middleware' => ['auth']], function () {
     Route::resource('barang', ItemController::class);
     Route::resource('merek', MerkController::class);
     Route::resource('kategori', CategoriesController::class);
+    /** Route Laporan Barang Masuk Dan Keluar **/
     Route::get(
         'laporan/barang/cetak',
         [ItemController::class, 'print']
