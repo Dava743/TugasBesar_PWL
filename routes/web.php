@@ -21,3 +21,7 @@ use Illuminate\Support\Facades\Route;
     Route::resource('kategori', CategoriesController::class);
     /** Route Profile **/
     Route::resource('profil', ProfileController::class);
+    Route::get(
+        'laporan/barang/cetak',
+        [ItemController::class, 'print']
+    )->name('cetak.barang');
