@@ -19,19 +19,22 @@ Route::group(['middleware' => ['auth']], function () {
         ->name('dashboard');
     /** Route Kasir **/
     Route::resource('kasir', CashierController::class);
+
     /** Route Barang **/
     Route::resource('barang', ItemController::class);
     Route::resource('merek', MerkController::class);
     Route::resource('kategori', CategoriesController::class);
+
     /** Route Laporan Barang Masuk Dan Keluar **/
     Route::get(
-        'laporan/barang/cetak',
-        [ItemController::class, 'print']
-    )->name('cetak.barang');
+        'laporan/barang',
+        [ItemController::class, 'report']
+    )->name('laporan.barang');
     Route::get(
-        'laporan/keuangan/cetak',
-        [FinanceController::class, 'print']
-    )->name('cetak.keuangan');
+        'laporan/transaksi',
+        [TransactionController::class, 'report']
+    )->name('laporan.transaksi');
+
     /** Route Profile **/
     Route::resource('profil', ProfileController::class);
 });
