@@ -12,6 +12,8 @@ use App\Http\Controllers\RoleController;
 use Illuminate\Support\Facades\Route;
 
 
-->name('dashboard');
-/** Route Kasir **/
-Route::resource('kasir', CashierController::class);
+        ->name('dashboard');
+    /** Route Kasir **/
+    Route::resource('kasir', CashierController::class);
+    /** Route Barang **/
+    Route::resource('barang', ItemController::class);
