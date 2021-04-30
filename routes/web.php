@@ -30,7 +30,6 @@ Route::group(['middleware' => ['auth']], function () {
         'laporan/barang',
         [ItemController::class, 'report']
     )->name('laporan.barang');
-   
 
     /** Route Profile **/
     Route::resource('profil', ProfileController::class);
