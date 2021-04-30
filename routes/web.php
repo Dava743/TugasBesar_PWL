@@ -12,19 +12,6 @@ use App\Http\Controllers\RoleController;
 use Illuminate\Support\Facades\Route;
 
 
-Auth::routes();
-
-Route::get('/home', [Home::class, 'index'])
-    ->name('home')
-    ->middleware('auth');
-
-Route::get('/admin/home', [Admin::class, 'index'])
-    ->name('admin.home')
-    ->middleware('is_admin');
-
-    Route::resource('barang', ProductController::class);
-    Route::resource('brand', BrandController::class);
-    Route::resource('kategori', CategorieController::class);
-    Route::resource('pegawai', UserController::class);
-    Route::resource('jabatan', RoleController::class);
-    Route::resource('profil', ProfileController::class);
+->name('dashboard');
+/** Route Kasir **/
+Route::resource('kasir', CashierController::class);
