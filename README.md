@@ -32,6 +32,11 @@ php artisan storage:link
 php artisan serve
 ```
 
-## Show your support
+## Use
 
-Give a ⭐️ if this project helped you!
+```Admin : admin@dava.com
+password : 123456
+user : user@dava.com
+password : 123456
+pegawai : pegawai@dava.com
+password : 123456
