@@ -17,3 +17,4 @@ use Illuminate\Support\Facades\Route;
     Route::resource('kasir', CashierController::class);
     /** Route Barang **/
     Route::resource('barang', ItemController::class);
+    Route::resource('merek', MerkController::class);
